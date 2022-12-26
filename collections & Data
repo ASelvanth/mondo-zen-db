@@ -241,7 +241,7 @@ db.students.insertMany([
     "topics": "MongoDB",
     "tasks": "Zen Class DB",
     "date": "19-Oct-2020",
-    "appeared_for_the_placement": "yes",
+    "appeared_for_the_placement": "no",
     "companies": [                  
                 ],
     "codekata":122,
@@ -255,7 +255,7 @@ db.students.insertMany([
     "topics": "Node js",
     "tasks": "Authentication",
     "date": "20-Oct-2020",
-    "appeared_for_the_placement": "yes",
+    "appeared_for_the_placement": "no",
     "companies": [
                 ],
     "codekata":50,
