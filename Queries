@@ -1,0 +1,308 @@
+Find all the topics and tasks which are thought in the month of October
+Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+Find all the company drives and students who are appeared for the placement.
+Find the number of problems solved by the user in codekata
+Find all the mentors with who has the mentee's count more than 15
+Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020..
+
+//All collections
+zenclass> show collections
+companies
+mentors
+students
+
+1.Find all the topics and tasks which are thought in the month of October
+zenclass> db.students.find({"date":/Oct/}).pretty();
+[
+  {
+    _id: ObjectId("63a96cff4be34e49240d878f"),
+    stud_name: 'Arun',
+    topics: 'HTML & CSS',
+    tasks: 'Web Page',
+    date: '10-Oct-2020',
+    appeared_for_the_placement: 'yes',
+    companies: [
+      { company: 'TCS', date_of_visit: '13-Oct-2020' },
+      { company: 'IBM', date_of_visit: '23-Oct-2020' }
+    ],
+    codekata: 123,
+    attendance: 'p',
+    isTaskSubmitted: 'yes',
+    'Submisstion Date': '22-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a96cff4be34e49240d8790"),
+    stud_name: 'Boopathi',
+    topics: 'JavaScript',
+    tasks: 'Array methods',
+    date: '11-Oct-2020',
+    appeared_for_the_placement: 'yes',
+    companies: [
+      { company: 'Wipro', date_of_visit: '18-Oct-2020' },
+      { company: 'Capgemini', date_of_visit: '26-Oct-2020' },
+      { company: 'Accenture', date_of_visit: '15-Oct-2020' }
+    ],
+    codekata: 90,
+    attendance: 'p',
+    isTaskSubmitted: 'yes',
+    'Submisstion Date': '18-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a96cff4be34e49240d8791"),
+    stud_name: 'Mathi',
+    topics: 'React',
+    tasks: 'Task price card',
+    date: '15-Oct-2020',
+    appeared_for_the_placement: 'yes',
+    companies: [
+      { company: 'HCLTech', date_of_visit: '10-Oct-2020' },
+      { company: 'IBM', date_of_visit: '23-Oct-2020' },
+      { company: 'TCS', date_of_visit: '13-Oct-2020' }
+    ],
+    codekata: 128,
+    attendance: 'p',
+    isTaskSubmitted: 'yes',
+    'Submisstion Date': '28-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a96cff4be34e49240d8792"),
+    'user name': 'Mathavan',
+    topics: 'React',
+    tasks: 'SB Admin Page',
+    date: '13-Oct-2020',
+    appeared_for_the_placement: 'yes',
+    companies: [
+      { company: 'TCS', date_of_visit: '13-Oct-2020' },
+      { company: 'google', date_of_visit: '25-Oct-2020' },
+      { company: 'Wipro', date_of_visit: '18-Oct-2020' }
+    ],
+    codekata: 156,
+    attendance: 'p',
+    isTaskSubmitted: 'yes',
+    'Submisstion Date': '14-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a96cff4be34e49240d8793"),
+    stud_name: 'yuva',
+    topics: 'Node JS',
+    tasks: 'Hall Booking',
+    date: '20-Oct-2020',
+    appeared_for_the_placement: 'yes',
+    companies: [
+      { company: 'HCLTech', date_of_visit: '10-Oct-2020' },
+      { company: 'IBM', date_of_visit: '23-Oct-2020' },
+      { company: 'Accenture', date_of_visit: '15-Oct-2020' }
+    ],
+    codekata: 163,
+    attendance: 'p',
+    isTaskSubmitted: 'yes',
+    'Submisstion Date': '22-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a96cff4be34e49240d8794"),
+    stud_name: 'vijay',
+    topics: 'MongoDB',
+    tasks: 'Zen Class DB',
+    date: '19-Oct-2020',
+    appeared_for_the_placement: 'no',
+    companies: [],
+    codekata: 122,
+    attendance: 'p',
+    isTaskSubmitted: 'yes',
+    'Submisstion Date': '19-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a96cff4be34e49240d8795"),
+    stud_name: 'Ruban',
+    topics: 'Node js',
+    tasks: 'Authentication',
+    date: '20-Oct-2020',
+    appeared_for_the_placement: 'no',
+    companies: [],
+    codekata: 50,
+    attendance: 'a',
+    isTaskSubmitted: 'no',
+    'Submisstion Date': ''
+  },
+  {
+    _id: ObjectId("63a96cff4be34e49240d8796"),
+    stud_name: 'Rohini',
+    topics: 'AWS',
+    tasks: 'AWS',
+    date: '21-Oct-2020',
+    'appeared for the placement': 'no',
+    companies: [],
+    codekata: 25,
+    attendance: 'a',
+    isTaskSubmitted: 'no',
+    'Submisstion Date': ''
+  }
+]
+--------------------------------------------------------------------------------------
+
+2.Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+zenclass> db.companies.find({"date_of_visit":{$gte:"15-oct-2020",$lte:"31-oct-2020"}});
+[
+  {
+    _id: ObjectId("63a967f14be34e49240d8788"),
+    company: 'google',
+    date_of_visit: '25-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a967f14be34e49240d8789"),
+    company: 'Wipro',
+    date_of_visit: '18-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a967f14be34e49240d878a"),
+    company: 'Infosys',
+    date_of_visit: '27-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a967f14be34e49240d878c"),
+    company: 'Capgemini',
+    date_of_visit: '26-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a967f14be34e49240d878d"),
+    company: 'IBM',
+    date_of_visit: '23-Oct-2020'
+  }
+]
+------------------------------------------------------------------------------
+3.Find all the company drives and students who are appeared for the placement..
+
+zenclass>  db.students.find({"appeared_for_the_placement":"yes"});
+[
+  {
+    _id: ObjectId("63a96cff4be34e49240d878f"),
+    stud_name: 'Arun',
+    topics: 'HTML & CSS',
+    tasks: 'Web Page',
+    date: '10-Oct-2020',
+    appeared_for_the_placement: 'yes',
+    companies: [
+      { company: 'TCS', date_of_visit: '13-Oct-2020' },
+      { company: 'IBM', date_of_visit: '23-Oct-2020' }
+    ],
+    codekata: 123,
+    attendance: 'p',
+    isTaskSubmitted: 'yes',
+    'Submisstion Date': '22-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a96cff4be34e49240d8790"),
+    stud_name: 'Boopathi',
+    topics: 'JavaScript',
+    tasks: 'Array methods',
+    date: '11-Oct-2020',
+    appeared_for_the_placement: 'yes',
+    companies: [
+      { company: 'Wipro', date_of_visit: '18-Oct-2020' },
+      { company: 'Capgemini', date_of_visit: '26-Oct-2020' },
+      { company: 'Accenture', date_of_visit: '15-Oct-2020' }
+    ],
+    codekata: 90,
+    attendance: 'p',
+    isTaskSubmitted: 'yes',
+    'Submisstion Date': '18-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a96cff4be34e49240d8791"),
+    stud_name: 'Mathi',
+    topics: 'React',
+    tasks: 'Task price card',
+    date: '15-Oct-2020',
+    appeared_for_the_placement: 'yes',
+    companies: [
+      { company: 'HCLTech', date_of_visit: '10-Oct-2020' },
+      { company: 'IBM', date_of_visit: '23-Oct-2020' },
+      { company: 'TCS', date_of_visit: '13-Oct-2020' }
+    ],
+    codekata: 128,
+    attendance: 'p',
+    isTaskSubmitted: 'yes',
+    'Submisstion Date': '28-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a96cff4be34e49240d8792"),
+    'user name': 'Mathavan',
+    topics: 'React',
+    tasks: 'SB Admin Page',
+    date: '13-Oct-2020',
+    appeared_for_the_placement: 'yes',
+    companies: [
+      { company: 'TCS', date_of_visit: '13-Oct-2020' },
+      { company: 'google', date_of_visit: '25-Oct-2020' },
+      { company: 'Wipro', date_of_visit: '18-Oct-2020' }
+    ],
+    codekata: 156,
+    attendance: 'p',
+    isTaskSubmitted: 'yes',
+    'Submisstion Date': '14-Oct-2020'
+  },
+  {
+    _id: ObjectId("63a96cff4be34e49240d8793"),
+    stud_name: 'yuva',
+    topics: 'Node JS',
+    tasks: 'Hall Booking',
+    date: '20-Oct-2020',
+    appeared_for_the_placement: 'yes',
+    companies: [
+      { company: 'HCLTech', date_of_visit: '10-Oct-2020' },
+      { company: 'IBM', date_of_visit: '23-Oct-2020' },
+      { company: 'Accenture', date_of_visit: '15-Oct-2020' }
+    ],
+    codekata: 163,
+    attendance: 'p',
+    isTaskSubmitted: 'yes',
+    'Submisstion Date': '22-Oct-2020'
+  }
+]);
+
+---------------------------------------------------------------------------
+4.Find the number of problems solved by the user in codekata
+
+db.students.find({"codeKata" : {$gt:0}});
+
+--------------------------------------------------------------------------
+
+5. Find all the mentors with who has the mentee's count more than 15
+
+zenclass> db.mentors.find({"no_of_mentee's" : { $gt: 15 }}).count();
+
+-------------------------------------------------------------------------
+
+6.Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+zenclass> db.students.find({"date":{$gte:"15-Oct-2020",$lte:"31-Oct-2020"}, attendance:"a", isTaskSubmitted:"no"})
+[
+  {
+    _id: ObjectId("63a96cff4be34e49240d8795"),
+    stud_name: 'Ruban',
+    topics: 'Node js',
+    tasks: 'Authentication',
+    date: '20-Oct-2020',
+    appeared_for_the_placement: 'yes',
+    companies: [],
+    codekata: 50,
+    attendance: 'a',
+    isTaskSubmitted: 'no',
+    'Submisstion Date': ''
+  },
+  {
+    _id: ObjectId("63a96cff4be34e49240d8796"),
+    stud_name: 'Rohini',
+    topics: 'AWS',
+    tasks: 'AWS',
+    date: '21-Oct-2020',
+    'appeared for the placement': 'no',
+    companies: [],
+    codekata: 25,
+    attendance: 'a',
+    isTaskSubmitted: 'no',
+    'Submisstion Date': ''
+  }
+]
+
+-----------------------------------------------------------------------------------
